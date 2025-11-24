@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- NOTE: The data-theme attribute controls the DaisyUI theme. The theme controller in the navbar allows users to switch themes. -->
+<html lang="en" data-theme="light">
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,28 +18,139 @@
       <!-- OPTIONAL: Add your analytics script here -->
   </head>
   
-  <body data-theme="light" onload="AOS.init();">
+  <body onload="AOS.init();" class="bg-base-100">
       <!-- Navbar -->
       <!-- REPLACE: Update navigation links to match your sections -->
-      <nav class="navbar bg-white fixed top-0 left-0 right-0 z-50 p-6" data-aos="fade-down">
+      <nav class="navbar bg-base-100 fixed top-0 left-0 right-0 z-50 p-6 shadow-sm" data-aos="fade-down">
           <div class="container mx-auto flex justify-between items-center px-4">
               <div class="flex items-center">
                   <!-- REPLACE: Update logo path and alt text -->
                   <a href="/" class="btn btn-ghost text-xl ml-2">
                     <img src="images/logo.png" alt="Your Logo" class="w-16">
                   </a>
-              </div>
-              <div class="flex-none hidden lg:block">
-                  <ul class="menu menu-horizontal px-1">
+          </div>
+              <div class="flex-none hidden lg:flex items-center gap-2">
+              <ul class="menu menu-horizontal px-1">
                       <!-- REPLACE: Update menu items with your own sections -->
                       <li><a href="#about">About</a></li>
                       <li><a href="#how-it-works">How It Works</a></li>
                       <li><a href="#packages">Pricing</a></li>
-                      <li><a href="#testimonials">Testimonials</a></li>
+                  <li><a href="#testimonials">Testimonials</a></li>
                       <li><a href="#faq">FAQ</a></li>
-                      <!-- REPLACE: Update with your booking/contact link -->
-                      <li><a href="#cta" class="btn btn-primary btn-sm">Get Started</a></li>
-                  </ul>
+              </ul>
+                  
+                  <!-- OPTIONAL: Theme Controller Dropdown - Remove this section if you don't want theme switching -->
+                  <!-- Learn more: https://daisyui.com/components/theme-controller/ -->
+                  <div class="dropdown dropdown-end">
+                      <div tabindex="0" role="button" class="btn btn-sm btn-ghost">
+                          <i data-lucide="palette" class="h-5 w-5"></i>
+                          <span class="hidden md:inline">Theme</span>
+                          <i data-lucide="chevron-down" class="h-3 w-3"></i>
+                      </div>
+                      <ul tabindex="-1" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl mt-4">
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Light"
+                                  value="light"
+                                  checked />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Dark"
+                                  value="dark" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Cupcake"
+                                  value="cupcake" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Retro"
+                                  value="retro" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Cyberpunk"
+                                  value="cyberpunk" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Valentine"
+                                  value="valentine" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Aqua"
+                                  value="aqua" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Lofi"
+                                  value="lofi" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Pastel"
+                                  value="pastel" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Fantasy"
+                                  value="fantasy" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Dracula"
+                                  value="dracula" />
+                          </li>
+                          <li>
+                              <input
+                                  type="radio"
+                                  name="theme-dropdown"
+                                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                                  aria-label="Business"
+                                  value="business" />
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- End Theme Controller -->
+                  
+                  <!-- REPLACE: Update with your booking/contact link -->
+                  <a href="#cta" class="btn btn-primary btn-sm ml-2">Get Started</a>
               </div>
           </div>
       </nav>
@@ -62,7 +174,7 @@
                       <!-- REPLACE: Update CTA button links and text -->
                       <a href="#packages" class="btn btn-primary">View Pricing</a>
                       <a href="#cta" class="btn btn-outline">Get Started</a>
-                  </div>
+      </div>
                   <!-- Social Proof Section -->
                   <div class="mt-6">
                       <!-- REPLACE: Update social proof text -->
@@ -70,20 +182,20 @@
                       <div class="flex mt-2 justify-center lg:justify-start">
                           <!-- REPLACE: Add customer profile images or remove this section -->
                           <div class="avatar-group -space-x-4">
-                              <div class="avatar">
+                          <div class="avatar">
                                   <div class="w-8">
                                       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 1" />
-                                  </div>
                               </div>
-                              <div class="avatar">
+                          </div>
+                          <div class="avatar">
                                   <div class="w-8">
                                       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 2" />
-                                  </div>
                               </div>
-                              <div class="avatar">
+                          </div>
+                          <div class="avatar">
                                   <div class="w-8">
                                       <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="Customer 3" />
-                                  </div>
+                          </div>
                               </div>
                           </div>
                           <!-- REPLACE: Update with your metrics -->
@@ -112,18 +224,18 @@
                       <!-- REPLACE: Update title and description -->
                       <h3 class="card-title text-xl mb-2">Service Type 1</h3>
                       <p class="text-base-content text-base">Brief description of your first service or product type.</p>
-                    </div>
-                  </div>
+          </div>
+      </div>
                   <!-- Card 2 -->
                   <div class="card bg-base-100 shadow-xl  min-h-64">
                     <div class="card-body flex flex-col justify-end items-start p-8">
                       <div class="w-24 h-24 mb-4 bg-base-200 rounded-lg flex items-center justify-center">
                         <i data-lucide="box" class="w-12 h-12 text-base-content opacity-30"></i>
-                      </div>
+          </div>
                       <h3 class="card-title text-xl mb-2">Service Type 2</h3>
                       <p class="text-base-content text-base">Brief description of your second service or product type.</p>
-                    </div>
-                  </div>
+          </div>
+      </div>
                   <!-- Card 3 -->
                   <div class="card bg-base-100 shadow-xl  min-h-64">
                     <div class="card-body flex flex-col justify-end items-start p-8">
@@ -132,7 +244,7 @@
                       </div>
                       <h3 class="card-title text-xl mb-2">Service Type 3</h3>
                       <p class="text-base-content text-base">Brief description of your third service or product type.</p>
-                    </div>
+                      </div>
                   </div>
                   <!-- Card 4 -->
                   <div class="card bg-base-100 shadow-xl  min-h-64">
@@ -142,7 +254,7 @@
                       </div>
                       <h3 class="card-title text-xl mb-2">Service Type 4</h3>
                       <p class="text-base-content text-base">Brief description of your fourth service or product type.</p>
-                    </div>
+                      </div>
                   </div>
                   <!-- Card 5 -->
                   <div class="card bg-base-100 shadow-xl  min-h-64">
@@ -152,7 +264,7 @@
                       </div>
                       <h3 class="card-title text-xl mb-2">Service Type 5</h3>
                       <p class="text-base-content text-base">Brief description of your fifth service or product type.</p>
-                    </div>
+                      </div>
                   </div>
                   <!-- Card 6 -->
                   <div class="card bg-base-100 shadow-xl  min-h-64">
@@ -162,7 +274,7 @@
                       </div>
                       <h3 class="card-title text-xl mb-2">Service Type 6</h3>
                       <p class="text-base-content text-base">Brief description of your sixth service or product type.</p>
-                    </div>
+                      </div>
                   </div>
               </div>
           </div>
@@ -209,10 +321,10 @@
                         <i data-lucide="rocket" class="w-24 h-24 text-primary opacity-30"></i>
                       </div>
                       <p class="text-base-content">Describe what happens in the third step of your process.</p>
-                    </div>
-                  </div>
+              </div>
               </div>
           </div>
+      </div>
       </section>
 
       <!-- 4. About Section -->
@@ -226,7 +338,7 @@
                         <figure class="rounded-lg shadow-lg overflow-hidden bg-base-200 flex items-center justify-center w-full h-full">
                           <i data-lucide="user-circle" class="w-32 h-32 text-base-content opacity-20"></i>
                         </figure>
-                    </div>
+            </div>
                 </div>
                 <div class="lg:w-2/3">
                     <!-- REPLACE: Update section heading -->
@@ -264,11 +376,11 @@
                                 <i data-lucide="badge" class="w-12 h-12 text-base-content opacity-30"></i>
                               </div>
                             </a>
-                        </div>
-                    </div>
+              </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
     </section>
 
       <!-- 5. Pricing Plans -->
@@ -281,7 +393,7 @@
                   <p class="text-sm md:text-base lg:text-lg mb-4 md:mb-6 leading-relaxed">Choose the plan that best fits your needs. No hidden fees, cancel anytime.</p>
                   <!-- REPLACE: Update currency note if needed -->
                   <div class="mt-3 md:mt-4 text-xs md:text-sm badge badge-outline min-h-8">All prices are in USD</div>
-              </div>
+          </div>
               
               <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
                   <!-- Plan 1 - Most Popular -->
@@ -296,7 +408,7 @@
                         <span class="line-through text-base-300">$199</span>
                         <span class="ml-2">$149</span>
                         <span class="text-xs md:text-sm font-normal">/month</span>
-                      </div>
+        </div>
                       <!-- REPLACE: Update discount note or remove -->
                       <span class="text-xs md:text-sm text-base-300 font-normal">*Limited time offer</span>
                       <!-- REPLACE: Update or remove guarantee badge -->
@@ -441,7 +553,7 @@
                       <!-- REPLACE: Add partnership/benefit image -->
                       <div class="rounded-lg shadow-xl max-w-sm w-full h-80 bg-base-300 flex items-center justify-center">
                         <i data-lucide="handshake" class="w-32 h-32 text-base-content opacity-20"></i>
-                      </div>
+                    </div>
                   </div>
               </div>
           </div>
@@ -559,7 +671,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
                 <!-- Testimonial 2 -->
                 <div class="card bg-base-100 shadow-xl min-h-64">
                   <div class="card-body flex flex-col justify-between">
@@ -585,7 +697,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
                 <!-- Testimonial 3 -->
                 <div class="card bg-base-100 shadow-xl min-h-64">
                   <div class="card-body flex flex-col justify-between">
@@ -603,16 +715,16 @@
                       <div class="avatar mr-4">
                         <div class="w-12 rounded-full">
                           <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                        </div>
-                      </div>
-                      <div>
+                  </div>
+              </div>
+                    <div>
                         <h4 class="font-bold">Customer Name</h4>
                         <p class="text-sm text-gray-600">Position, Company</p>
                       </div>
                     </div>
                   </div>
-                </div>
               </div>
+            </div>
           </div>
       </section>
 
@@ -620,70 +732,70 @@
       <!-- REPLACE: Update all questions and answers -->
       <section class="py-24 mt-10 rounded-lg" id="faq" data-aos="fade-up">
           <div class="container mx-auto px-4">
-              <div class="grid gap-4 lg:grid-cols-3 lg:gap-8">
-                  <div class="h-auto">
+        <div class="grid gap-4 lg:grid-cols-3 lg:gap-8">
+        <div class="h-auto">
                       <h2 class="text-base font-semibold leading-7 text-primary">Questions?</h2>
                       <!-- REPLACE: Update section heading -->
                       <p class="mt-2 text-3xl font-bold tracking-tight">Frequently Asked Questions</p>
                       <!-- REPLACE: Update section description -->
                       <p class="mt-6 text-lg leading-8">Everything you need to know about our service.</p>
-                  </div>
+        </div>
                   <div class="h-auto lg:col-span-2 ">
                       <div class="join join-vertical w-full bg-base-100 rounded-3xl">
                           <!-- FAQ 1 -->
                           <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="100">
-                              <input type="radio" name="my-accordion-4" checked="checked" />
+                <input type="radio" name="my-accordion-4" checked="checked" />
                               <!-- REPLACE: Update question -->
                               <div class="collapse-title text-xl font-medium">What is your refund policy?</div>
-                              <div class="collapse-content">
+                <div class="collapse-content">
                                   <!-- REPLACE: Update answer -->
                                   <p>Explain your refund policy in detail here. Be clear and transparent about terms and conditions.</p>
-                              </div>
-                          </div>
+            </div>
+            </div>
                           <!-- FAQ 2 -->
                           <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="200">
-                              <input type="radio" name="my-accordion-4" />
+                <input type="radio" name="my-accordion-4" />
                               <div class="collapse-title text-xl font-medium">How long does it take to get started?</div>
-                              <div class="collapse-content">
+                <div class="collapse-content">
                                   <p>Provide a detailed answer about your onboarding timeline and process.</p>
-                              </div>
-                          </div>
+                </div>
+            </div>
                           <!-- FAQ 3 -->
                           <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="300">
-                              <input type="radio" name="my-accordion-4" />
+                <input type="radio" name="my-accordion-4" />
                               <div class="collapse-title text-xl font-medium">Can I upgrade or downgrade my plan?</div>
-                              <div class="collapse-content">
+                <div class="collapse-content">
                                   <p>Explain the flexibility of your pricing plans and how changes work.</p>
-                              </div>
-                          </div>
+                </div>
+            </div>
                           <!-- FAQ 4 -->
                           <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="400">
-                              <input type="radio" name="my-accordion-4" />
+                <input type="radio" name="my-accordion-4" />
                               <div class="collapse-title text-xl font-medium">What technologies do you use?</div>
-                              <div class="collapse-content">
+                <div class="collapse-content">
                                   <p>List the technologies and explain why you use them.</p>
-                              </div>
-                          </div>
+                </div>
+            </div>
                           <!-- FAQ 5 -->
                           <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="500">
-                              <input type="radio" name="my-accordion-4" />
+                <input type="radio" name="my-accordion-4" />
                               <div class="collapse-title text-xl font-medium">Do you offer support?</div>
-                              <div class="collapse-content">
+                <div class="collapse-content">
                                   <p>Describe your support offering, response times, and channels.</p>
-                              </div>
-                          </div>
+                </div>
+            </div>
                           <!-- FAQ 6 -->
                           <div class="collapse collapse-arrow join-item border-base-300 border" data-aos="fade-up" data-aos-delay="600">
-                              <input type="radio" name="my-accordion-4" />
+                <input type="radio" name="my-accordion-4" />
                               <div class="collapse-title text-xl font-medium">Can I cancel anytime?</div>
-                              <div class="collapse-content">
+                <div class="collapse-content">
                                   <p>Explain your cancellation policy clearly.</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+                </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
       </section>
 
       <!-- 10. Final CTA -->
@@ -711,7 +823,7 @@
           </div>
       </div>
 
-      <!-- Footer -->
+          <!-- Footer -->
       <!-- REPLACE: Update all footer information -->
       <footer class="footer p-8 md:py-16 mt-0 rounded-lg" data-aos="fade-up">
           <aside>
@@ -775,6 +887,31 @@
       <!-- Initialize Lucide Icons -->
       <script>
         lucide.createIcons();
-       </script>
+      </script>
+
+      <!-- OPTIONAL: Save theme preference to localStorage -->
+      <!-- Uncomment the script below to persist theme selection across page reloads -->
+      <!--
+      <script>
+        // Load saved theme from localStorage on page load
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        
+        // Check the matching radio button
+        const themeRadio = document.querySelector(`input[name="theme-dropdown"][value="${savedTheme}"]`);
+        if (themeRadio) {
+          themeRadio.checked = true;
+        }
+        
+        // Save theme to localStorage when changed
+        const themeControllers = document.querySelectorAll('.theme-controller');
+        themeControllers.forEach(controller => {
+          controller.addEventListener('change', function(e) {
+            const theme = e.target.value;
+            localStorage.setItem('theme', theme);
+          });
+        });
+      </script>
+      -->
   </body>
 </html>

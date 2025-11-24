@@ -30,6 +30,7 @@ This is a **completely free Tailwind HTML DaisyUI template** designed for develo
 - 💰 **100% Free**: Free Tailwind template with no subscription fees or hidden costs
 - ⚡ **Fast Loading**: CDN-hosted Tailwind CSS and DaisyUI for optimal performance
 - 🎭 **Multiple Themes**: Access to 30+ DaisyUI themes out of the box
+- 🎨 **Theme Dropdown**: Built-in theme selector with 12 popular themes in navbar (easily customizable or removable)
 - ♿ **Accessible**: Built with semantic HTML5 and WCAG compliant components
 - 🔍 **SEO Ready**: Semantic markup perfect for search engine optimization
 
@@ -113,17 +114,50 @@ This **free Tailwind template** uses Lucide icon placeholders. You can:
 - **Replace with images** - Simply swap the `<div>` with an `<img>` tag
 - **Use different icons** - Browse 1000+ free Lucide icons
 
-### 4. Choose Your DaisyUI Theme
+### 4. Theme Switching Options
 
-One of the best features of this **free DaisyUI template** is instant theme switching! Change the entire color scheme by updating one attribute:
+This **free DaisyUI template** includes a built-in theme controller dropdown in the navbar!
+
+#### Option A: Use the Built-in Theme Dropdown (Default)
+The template includes a theme selector dropdown in the navbar with **12 pre-loaded themes**:
+- Light (default)
+- Dark
+- Cupcake
+- Retro
+- Cyberpunk
+- Valentine
+- Aqua
+- Lofi
+- Pastel
+- Fantasy
+- Dracula
+- Business
+
+Users can click the palette icon to open the dropdown and select their preferred theme. The theme changes instantly across the entire page!
+
+**Want to persist the theme across page reloads?**
+Uncomment the localStorage script at the bottom of `index.html` (clearly marked with instructions).
+
+**Don't want the theme dropdown?**
+Simply delete the "Theme Controller Dropdown" section in the navbar (marked with comments in the HTML).
+
+**Want to add more themes?**
+Just add more `<li>` items with `<input>` radio buttons to the dropdown. All 30+ DaisyUI themes are available!
+
+#### Option B: Set a Fixed Theme
+Change the entire site to use a single theme by updating the `data-theme` attribute on the `<html>` tag:
 
 ```html
-<body data-theme="light">
-<!-- Change "light" to any theme name -->
+<html lang="en" data-theme="dark">
+<!-- Change to any theme name below -->
 ```
 
+**Important:** The `data-theme` attribute must be on the `<html>` element, not the `<body>` element, for DaisyUI themes to work properly.
+
 **30+ Free DaisyUI Themes Available:**
-`light`, `dark`, `cupcake`, `bumblebee`, `emerald`, `corporate`, `synthwave`, `retro`, `cyberpunk`, `valentine`, `halloween`, `garden`, `forest`, `aqua`, `lofi`, `pastel`, `fantasy`, `wireframe`, `black`, `luxury`, `dracula`, and more!
+`light`, `dark`, `cupcake`, `bumblebee`, `emerald`, `corporate`, `synthwave`, `retro`, `cyberpunk`, `valentine`, `halloween`, `garden`, `forest`, `aqua`, `lofi`, `pastel`, `fantasy`, `wireframe`, `black`, `luxury`, `dracula`, `business`, `autumn`, `acid`, `lemonade`, `night`, `coffee`, `winter`, and more!
+
+Learn more about theme controllers: [DaisyUI Theme Controller Docs](https://daisyui.com/components/theme-controller/)
 
 ### 5. Test Your Tailwind HTML Template Locally
 
